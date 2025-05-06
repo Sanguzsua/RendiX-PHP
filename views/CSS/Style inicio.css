@@ -1,0 +1,157 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUENTE Y CUERPO */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("iniciov2.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 20px;
+    color: #ff6600;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.container {
+    background: rgba(133, 133, 133, 0.27);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+/* TÍTULO */
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #e32d00;
+    letter-spacing: 1px;
+}
+
+/* ETIQUETAS */
+label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 6px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+}
+
+/* CAMPOS DE TEXTO */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #f27000;
+    outline: none;
+    background-color: #e54100;
+}
+
+/* BOTÓN REGISTRO */
+button {
+    background: linear-gradient(135deg, #d75d00, #c85e01);
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* LOGO */
+img[alt="rendix"] {
+    margin-top: 25px;
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* PIE DE PÁGINA */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* REDES */
+.social-link {
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.social-icon:hover {
+    transform: scale(1.3);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .container h1 {
+        font-size: 26px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,575 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #eaf4ff;
+    /* Aquí modificamos el color de fondo para que coincida con el del encabezado */
+    background: linear-gradient(310deg, #000000, #434443);
+}
+  
+  header {
+    background: linear-gradient(310deg, #ff8000, #0c8301);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 150px; /* Ajusta el tamaño del logo */
+  }
+  
+ 
+
+  
+  /* Estilos del menú */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que el menú sea responsivo */
+  }
+  
+  nav li {
+    margin: 0 15px; /* Espaciado entre los elementos del menú */
+    position: relative; /* Necesario para el menú desplegable */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333; /* Color del texto */
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Transición suave */
+  }
+  
+  /* Efecto hover en los enlaces */
+  nav a:hover {
+    background-color: #ff5733;
+    color: white;
+    border-radius: 5px; /* Añade bordes redondeados en hover */
+    transform: scale(1.05); /* Animación de crecimiento */
+  }
+  
+  /* Menú desplegable */
+  .dropdown-content {
+    display: none; /* Oculta el contenido del menú por defecto */
+    position: absolute; /* Posiciona el menú desplegable */
+    background-color: #000000;
+    box-shadow: 0px 8px 16px rgba(167, 162, 162, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+    top: 100%; /* Posiciona el menú desplegable debajo del elemento padre */
+    left: 0; /* Alinea el menú a la izquierda */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; /* Muestra el contenido del menú al hacer hover */
+  }
+  
+  .dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #555; /* Cambia el color de fondo cuando se selecciona */
+  }
+
+  /* Estilos del botón "ALQUILA YA" */
+  .button {
+    width: 180px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    background-image: linear-gradient(rgba(8, 252, 0, 0.763), rgb(4, 115, 8)); /* Fondo con un degradado lineal */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Bordes redondeados, haciendo que el botón sea ovalado */
+    color: rgb(255, 255, 255); /* Color del texto */
+    font-weight: 600; /* Grosor de la fuente */
+    display: flex; /* Uso de Flexbox para alinear el contenido */
+    align-items: center; /* Alinea verticalmente el contenido al centro */
+    justify-content: center; /* Alinea horizontalmente el contenido al centro */
+    gap: 5px; /* Espacio entre los elementos hijos del botón */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+    box-shadow: 1px 3px 0px rgb(0, 213, 46); /* Sombra del botón */
+    transition-duration: 0.3s; /* Duración de la transición de las propiedades que cambian */
+  }
+  .button:hover {
+    background-image: linear-gradient(rgba(4, 115, 8, 0.763), rgb(8, 252, 0)); /* Fondo invertido en hover */
+    color: rgb(255, 255, 255); /* Color del texto en hover */
+  }
+  /*Adiccionarcolor al CARRITO DE COMPRAS*/
+  .cartIcon path {
+    fill: rgb(255, 255, 255); /* Asegura que el color de relleno sea blanco */
+  }
+  
+  .button:active {
+    transform: scale(0.95); /* Efecto de presión */
+    box-shadow: 1px 3px 0px rgb(0, 213, 46); /* Sombra del botón */
+  }
+  /* Estilos de la tarjeta */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 260px;
+    padding: 20px 1px;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(0, 140, 255, 0.4), 0 4px 6px -4px rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background-color: #00ff37;
+    background: linear-gradient(45deg, #ff6200ea 0%, #43aa07 100%);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .content img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+  }
+  
+  .content .price {
+    color: #fff;
+    font-weight: 800;
+    font-size: 28px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+  }
+  
+  .content .description {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .content .title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+  
+  button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: none;
+    outline: none;
+    color: rgb(255 255 255);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.90rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(20, 94, 14);
+    border-radius: 0.5rem;
+    width: 90%;
+    text-shadow: 0px 4px 18px #c8ff00;
+  }
+  
+  /* Media Queries para hacer la página responsiva */
+  @media (max-width: 768px) {
+    .contenedor-bloques {
+      flex-direction: column; /* Cambia la dirección de los bloques a columna en pantallas más pequeñas */
+      align-items: center; /* Centra los bloques verticalmente */
+    }
+  
+    .contenedor-bloques .fila {
+      flex-direction: column; /* Asegura que cada fila también se ajuste */
+      width: 100%; /* Asegura que los bloques ocupen el ancho completo */
+    }
+  
+    nav ul {
+      flex-direction: column; /* Coloca los elementos del menú en una columna */
+    }
+  }
+  /* From Uiverse.io by EddyBel */ 
+  .input__container {
+    
+    position: relative;
+    background: rgba(255, 255, 255, 0.664);
+    padding: 9px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 25px;
+    max-width: 500px;
+    transform-style: preserve-3d;
+    transform: rotateX(1deg) rotateY(-10deg);
+}
+
+.shadow__input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(30px);
+  border-radius: 20px;
+  background-color: #ffdb99;
+  background-image: radial-gradient(at 85% 51%, hsla(60,60%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 74% 68%, rgb(255, 255, 255) 0px, transparent 50%),
+    radial-gradient(at 64% 79%, rgb(0, 11, 25) 0px, transparent 50%),
+    radial-gradient(at 75% 16%, rgb(0, 0, 0) 0px, transparent 50%),
+    radial-gradient(at 90% 65%, rgb(0, 209, 115) 0px, transparent 50%),
+    radial-gradient(at 91% 83%, rgb(255, 89, 0) 0px, transparent 50%),
+    radial-gradient(at 72% 91%, rgb(114, 228, 110) 0px, transparent 50%);
+}
+
+.input__button__shadow {
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: transform 0ms, background 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.input__button__shadow:hover {
+  background: rgba(105, 70, 70, 0.411);
+}
+
+.input__search {
+  width: 900%;
+  border-radius: 40px;
+  outline: none;
+  border: none;
+  padding: 7px;
+  position: relative;
+} 
+
+.input__ayuda {
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    max-width: 600px;
+    margin: 0 auto; /* Centra horizontalmente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sombra decorativa */
+.shadow__ayuda {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: blur(30px);
+    border-radius: 25px;
+    background-color: #ffeeba;
+    background-image: radial-gradient(at 70% 30%, rgba(255, 200, 80, 0.8) 0px, transparent 50%);
+}
+
+/* Botón del icono */
+.input__button__ayuda {
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 5px;
+    transition: transform 0.2s ease, background 0.4s ease;
+}
+
+.input__button__ayuda:hover {
+    background: rgba(105, 70, 70, 0.1);
+    transform: scale(1.1);
+}
+
+/* Input de búsqueda */
+.input__buscaayuda {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Estilo del título principal (botón desplegable) */
+/* Botón desplegable específico */
+.dropdown-menu-btn {
+    cursor: pointer;
+    background-color: #ff8000;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu-btn:hover {
+    background-color: #48ff00;
+}
+
+/* Contenedor desplegable específico */
+.dropdown-menu-content {
+    display: none; /* Oculto por defecto */
+    margin-top: 15px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mostrar contenido al agregar la clase "show" */
+.dropdown-menu-content.show {
+    display: block;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.column p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+/* Botón desplegable específico para Sección 2 */
+.dropdown-menu2 {
+    cursor: pointer;
+    background-color: #2bff00; /* Color azul distintivo */
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu2:hover {
+    background-color: #824500;
+}
+
+/* Contenedor desplegable específico para Sección 2 */
+.dropdown-menu2-content {
+    display: none; /* Oculto por defecto */
+    margin-top: 15px;
+    background-color: #eaf4ff; /* Fondo azul claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mostrar contenido al agregar la clase "show2" */
+.dropdown-menu2-content.show2 {
+    display: block;
+}
+
+/* Contenedor principal específico */
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.column.izquierda, .column.derecha {
+    flex: 1;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column.izquierda h2, .column.derecha h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0056b3; /* Azul oscuro */
+}
+
+.column.izquierda p, .column.derecha p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+/* Estilo general para el contenedor del formulario */
+.form-container {
+  width: 400px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, #ff7b00 35%, transparent 70%, #51ff00) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif; /* Fuente consistente */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+}
+
+/* Animación de interacción del botón */
+.form-container button:active {
+  scale: 0.95;
+  background-color: #1cff08;
+}
+
+/* Organización general del formulario */
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #00ff0d; /* Color de acento */
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input,
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: #313131; /* Fondo oscuro para inputs */
+  border: 1px solid #414141;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Placeholder opaco */
+.form-container .form-group input::placeholder,
+.form-container .form-group textarea::placeholder {
+  opacity: 0.7;
+}
+
+/* Efecto de enfoque */
+.form-container .form-group input:focus,
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #3cff00;
+  box-shadow: 0px 0px 4px #ff8800;
+}
+
+/* Estilo del botón de envío */
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #212121; /* Texto oscuro */
+  font-weight: 600;
+  width: 50%;
+  background: linear-gradient(145deg, #64ff1c, #ff6702);
+  border: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container .form-submit-btn:hover {
+  transform: scale(1.05);
+  background-color: #fff;
+  color: #212121; /* Invertir texto */
+}
+
+/* Versión compacta en dispositivos pequeños */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    padding: 24px 16px;
+  }
+}

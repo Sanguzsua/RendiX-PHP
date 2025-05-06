@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;/*establece el estilo de la letra*/
+    display: flex;/*se utiliza flexbox para poder centrar el contenido*/
+    justify-content: center;/*se utiliza para centrar el contenido horizontalmente*/
+    align-items: center;/*se utiliza para centrar verticalmente el contenido*/
+    min-height: 100vh; /*Ocupa toda la altura de la pantalla*/
+    margin: 0;/*se agrega una margen alrededor del contenido*/
+    background-color: #fcfcfc;/*establece el color de fondo*/
+}
+
+.container {
+    text-align: center;/*se utiliza para centrar el texto dentro del contenedor*/
+    padding: 20px;/*agrega como un relleno o margenes en el contenedor*/
+    background-color: #dd8c2f; /*establece el color del fondo del contenedor*/
+    border-radius: 8px;/*aplica borde redondeado al contenedor*/
+    width: 300px;/*se utiliza para ancho del formulario*/
+   
+}
+
+h1 {
+    color: #333;/*establece el color del texto*/
+    margin-bottom: 20px;/*crea un espacio debajo del titulo*/
+}
+input {
+    padding: 8px;/*crea un espacio interior*/
+    margin-bottom: 10px;/*crea un espacio debajo de cada campo*/
+    border: 1px solid #ccc;/*añade un color y un borde ligero*/
+    border-radius: 4px;/*crea bordes redondeados*/
+}
+
+button {
+    padding: 10px; /*agrega como un relleno o margenes en el boton*/
+    background-color: #2bac47;/*establece el color de fondo del boton*/
+    color: #fff;/*Color del texto del botón*/
+    border-radius: 4px;/*aplica borde redondeado en el boton*/
+    cursor: pointer;/*cambia la forma del cursor por una mano cuando se pasa por encima del boton*/
+    font-size: 16px;/*cambia el tamaño del texto ajustandolo al boton*/
+}
+
+button:hover {
+    background-color: #a7550a;/*cambia el color del boton cuando se pasa el cursor por encima*/
+}
+
+footer {
+    background-color: #9e5b02;/*establce el color de fondo del pie de pagina*/
+    color: #fff;/*Color del texto del pie de página*/
+    text-align: center;/*centrar el texto del pie de pagina*/
+    padding: 10px;/*agrega como un relleno o margenes en el pie de pagina*/
+    width: 100%;/*ayuda a que todo el pie de pagina ocupe todo el ancho de la pagina*/
+    position: fixed;/*se utiliza para fijar el pie de pagina en la parte de abajo*/
+    bottom: 0;/*nos ayuda a que el pie de pagina este abajo*/
+}
+.social-icon {
+    width: 30px;/*sirve para el ancho de la imagen*/ 
+    height: 30px;/*sirve para definir la altura de la imagen*/
+    margin-right: 20px;/*sirve para añadir un espacio a la derecha entre iconos*/
+    vertical-align: middle;/*sirve para alinear verticalmente el icono con alguna linea de texto*/
+}
+img{
+    width:40%;/*se utiliza para que se ajuste el ancho de la imagen*/
+    height:auto;/*se  utiliza para que la imagen se mantenga responsiva osea ajusta la altura automaticamente*/
+}

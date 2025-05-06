@@ -1,0 +1,198 @@
+/* Estilos generales para el cuerpo de la página */ 
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: linear-gradient(to left, #000000, #000000, #0055ff); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+}
+
+
+.container {
+    background: #3acfec;
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    max-width: 600px; 
+    width: 800%; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #004aad, #0066ff);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+.card-holder,
+.card-expiry {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 80%; /* Ajustar el ancho máximo */
+        padding: 20px; /* Ajustar el padding */
+    }
+    
+    input {
+        font-size: 12px; /* Ajustar el tamaño del texto */
+        height: 35px; /* Ajustar la altura de los campos de entrada */
+    }
+    
+    button {
+        font-size: 14px; /* Ajustar el tamaño del texto del botón */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%; /* Ajustar el ancho máximo */
+        padding: 15px; /* Ajustar el padding */
+    }
+    
+    input {
+        font-size: 10px; /* Ajustar el tamaño del texto */
+        height: 30px; /* Ajustar la altura de los campos de entrada */
+    }
+    
+    button {
+        font-size: 12px; /* Ajustar el tamaño del texto del botón */
+    }
+    
+    h1 {
+        font-size: 1.2em; /* Ajustar el tamaño del texto del título */
+    }
+    
+    label {
+        font-size: 0.9em; /* Ajustar el tamaño del texto de las etiquetas */
+    }
+}
+
+/* MASTERCARD */
+/* Estilos generales para el cuerpo de la página */ 
+ #mastercard { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: linear-gradient(to left, #000000, #000000, #ff0000); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+}
+
+
+.container1 {
+    background: #a32323;
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    max-width: 600px; 
+    width: 800%; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.card1 {
+    background: linear-gradient(135deg, #fb0101, #f4b506);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 80%; /* Ajustar el ancho máximo */
+        padding: 20px; /* Ajustar el padding */
+    }
+    
+    input {
+        font-size: 12px; /* Ajustar el tamaño del texto */
+        height: 35px; /* Ajustar la altura de los campos de entrada */
+    }
+    
+    button {
+        font-size: 14px; /* Ajustar el tamaño del texto del botón */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%; /* Ajustar el ancho máximo */
+        padding: 15px; /* Ajustar el padding */
+    }
+    
+    input {
+        font-size: 10px; /* Ajustar el tamaño del texto */
+        height: 30px; /* Ajustar la altura de los campos de entrada */
+    }
+    
+    button {
+        font-size: 12px; /* Ajustar el tamaño del texto del botón */
+    }
+    
+    h1 {
+        font-size: 1.2em; /* Ajustar el tamaño del texto del título */
+    }
+    
+    label {
+        font-size: 0.9em; /* Ajustar el tamaño del texto de las etiquetas */
+    }
+}
+
+
+

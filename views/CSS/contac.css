@@ -1,0 +1,147 @@
+/* contac.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #d66700;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgr {
+    height: 50px;
+}
+
+.header-content h1 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 2em;
+    color: #000000;
+}
+
+.informacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.nombre {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.nombre:hover {
+    transform: translateY(-5px);
+}
+
+.fotodenosotros {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #1e1e2f;
+}
+
+.nombre h3 {
+    margin: 10px 0;
+    color: #1e1e2f;
+}
+
+.contact-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #146600;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #d35f00;
+}
+
+.back-button-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.back-btn {
+    padding: 12px 25px;
+    background-color: #126b00;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #e25a00;
+}
+
+footer {
+    background-color: #e67a00;
+    color: white;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info,
+.social-links {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}

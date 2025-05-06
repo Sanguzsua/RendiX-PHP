@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif; /*establece el estilo de la letra*/
+    background-color: #f9f9f9; /*establece el color de fondo*/
+    margin: 0;/*se agrega una margen alrededor del contenido*/
+}
+header {
+    background: linear-gradient(310deg, #ff8000, #0c8301); /* Encabezado con degradado */
+    color: #fff;/*establece el color de la letra*/
+    padding: 20px;/*agrega como un relleno o margenes*/
+    text-align: center;/*se utiliza para centrar el texto dentro del header*/
+    font-size: 1.5em;/*cambia el tamaño del texto ajustandolo en el header*/
+}
+main {
+    padding: 20px;/*agrega como un relleno o margenes*/
+   flex-direction: column;/*se utiliza para que quede centrado verticalmente */
+   
+}
+#productos-carrito {
+    background: #fff;/*establece el color de fondo*/
+    padding: 20px;/*agrega como un relleno o margenes*/
+    border-radius: 10px;/*aplica borde redondeado*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*agrega como sombra para un efecto flotante */
+}
+
+#productos-carrito p {
+    font-size: 1.2em;/*cambia el tamaño del texto ajustandolo dentro del contenedor*/
+    color: #777; /*Color gris para el texto*/
+    text-align: center;/*centra el texto del contenedor*/
+}
+footer {
+    background: linear-gradient(310deg, #ff8000, #0c8301);/*establce el color de fondo del pie de pagina*/
+    color: #fff;/*Color del texto del pie de página*/
+    text-align: center;/*centrar el texto del pie de pagina*/
+    padding: 10px;/*agrega como un relleno o margenes en el pie de pagina*/
+    width: 100%;/*ayuda a que todo el pie de pagina ocupe todo el ancho de la pagina*/
+    position: fixed;/*se utiliza para fijar el pie de pagina en la parte de abajo*/
+    bottom: 0;/*nos ayuda a que el pie de pagina este abajo*/
+}
+
+.social-icon {
+    width: 30px;/*sirve para el ancho de la imagen*/ 
+    height: 30px;/*sirve para definir la altura de la imagen*/
+    margin-right: 20px;/*sirve para añadir un espacio a la derecha entre iconos*/
+    vertical-align: middle;/*sirve para alinear verticalmente el icono con alguna linea de texto*/
+}
+
+.imgr{
+    width: 150px; /*ajusta el tamaño del logo*/
+}

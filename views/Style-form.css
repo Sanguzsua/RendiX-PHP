@@ -1,0 +1,126 @@
+/* Estilos generales para el cuerpo de la página */ 
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: linear-gradient(to left, #077803, #00ff00, #ffffff); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+}
+
+#l1 {
+    text-align: center;
+    font-size: 15px;
+    color: #00fd04;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    border: none;
+    background: linear-gradient(135deg, #057b5e, #0e1249);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Contenedor principal del formulario */ 
+.container-direccion { 
+    background-color: #d55900; 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    max-width: 600px; 
+    width: 800%; 
+    border: 2px solid #ff6600; 
+    max-height: 900px;
+    margin: 10px; /* Añadir margen para respiración */
+} 
+
+/* Estilo del título */
+h1 { 
+    color: #ff6600; 
+    font-size: 1.5em;
+    margin-bottom: 20px; /* Añadir espacio debajo del título */
+} 
+
+/* Estilo del formulario */ 
+form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; /* Ajustar el espacio entre los elementos del formulario */
+}
+
+/* Estilo de las etiquetas */ 
+label { 
+    font-weight: bold; 
+    color: #098d00; 
+    text-align: left; /* Alinear las etiquetas a la izquierda */
+}
+
+/* Estilo de los campos de entrada */ 
+input { 
+    padding: 0px; /* Añadir padding interno */
+    border: 0px solid #01db0f; /* Cambiar el borde a 1px */
+    border-radius: 5px; 
+    font-size: 14px; /* Ajustar el tamaño del texto de los campos de entrada */
+    height: 30px; /* Ajustar la altura de los campos de entrada */
+}
+
+/* Estilo del botón */ 
+button { 
+    padding: 10px 20px; 
+    border: none; 
+    background-color: #0073de; 
+    color: #ffffff; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+}
+
+button:hover { 
+    background-color: #0f0cb0; 
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+
+    .container-direccion {
+        max-width: 80%; /* Ajustar el ancho máximo */
+        padding: 20px; /* Ajustar el padding */
+    }
+    
+    input {
+        font-size: 12px; /* Ajustar el tamaño del texto */
+        height: 35px; /* Ajustar la altura de los campos de entrada */
+    }
+    
+    button {
+        font-size: 14px; /* Ajustar el tamaño del texto del botón */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-direccion {
+        max-width: 90%; /* Ajustar el ancho máximo */
+        padding: 15px; /* Ajustar el padding */
+    }
+    
+    input {
+        font-size: 10px; /* Ajustar el tamaño del texto */
+        height: 30px; /* Ajustar la altura de los campos de entrada */
+    }
+    
+    button {
+        font-size: 12px; /* Ajustar el tamaño del texto del botón */
+    }
+    
+    h1 {
+        font-size: 1.2em; /* Ajustar el tamaño del texto del título */
+    }
+    
+    label {
+        font-size: 0.9em; /* Ajustar el tamaño del texto de las etiquetas */
+    }
+}
+

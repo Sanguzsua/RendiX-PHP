@@ -1,0 +1,1515 @@
+/* Estilos generales */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Estructura general del header */
+header {
+  background: linear-gradient(45deg, #ff5500, #ff9500);  /* Degradado naranja más vibrante */
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 18px rgba(255, 106, 0, 0.3);  /* Sombra más pronunciada con tinte naranja */
+  border-bottom: 3px solid #ff4d00;  /* Borde inferior para más definición */
+  color: white;  /* Texto en blanco para mejor contraste */
+}
+
+/* Logo */
+.logo img {
+  max-height: 100px;
+  margin-right: 20px;
+  height: 80px;
+}
+
+/* Contenedor principal para agrupar logo, buscador y menú */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Buscador */
+.input__container {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Campo de texto del buscador */
+.input__search {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 250px;
+}
+
+/* Botón de búsqueda */
+.input__button__shadow {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Menú principal */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ítems del menú */
+nav li {
+  position: relative;
+}
+
+/* Enlaces del menú */
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+/* Hover más sutil y moderno */
+nav a:hover {
+  background-color: rgb(5, 145, 0);
+  transform: translateY(-2px);
+}
+
+/* Estilo dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 10;
+  min-width: 200px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Hover para ítems */
+.dropdown-content a:hover {
+  background: #f2f2f2;
+}
+
+/* Mostrar menú al pasar el cursor por el li padre */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Botón ALQUILA YA */
+.button {
+  background: linear-gradient(to right, #00c000, #008000);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.button:hover {
+  background: #009e42;
+}
+
+.cartIcon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+
+  .input__search {
+    width: 100%;
+  }
+
+  .button {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background: #f3f3f3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  background: 
+    linear-gradient(to bottom, rgba(255,123,0,0.8) 0%, rgba(255,192,76,0.6) 50%, rgba(243,243,243,0.9) 100%),
+    url('IMAGENES/RENDIX- fondo.png') center/cover no-repeat;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+.content {
+  color: #000000;
+  max-width: 500px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.content h2 {
+  font-size: 56px;
+  margin-bottom: 15px;
+  color: #1c1c1c;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0);
+  letter-spacing: -1px;
+}
+
+.content p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(48, 192, 0);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #fff8e1;
+  transform: scale(1.05);
+}
+
+.slide img {
+  height: 320px;
+  max-width: 450px;
+  border-radius: 16px;
+  animation: zoomIn 6s infinite alternate;
+  object-fit: contain;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* ✅ RESPONSIVE PARA CELULARES */
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+ 
+
+  .content {
+    max-width: 100%;
+  }
+
+  .content h2 {
+    font-size: 36px;
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .slider {
+    height: auto;
+  }
+}
+
+
+/*encabezado más responsivo, puedes utilizar CSS Flexbox*/
+
+.seccion-destacados {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #ffe8d6, #fff);
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.15);
+  border-bottom: 3px solid #ff7b00;
+}
+
+.seccion-destacados h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  color: #ff5500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+.seccion-destacados h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff5500, #ff9500);
+  border-radius: 2px;
+}
+
+.seccion-destacados h5 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 1.5rem auto 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.seccion-destacados .emoji {
+  font-size: 1.4em;
+  vertical-align: middle;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .seccion-destacados h3 {
+    font-size: 1.8rem;
+  }
+  
+  .seccion-destacados h5 {
+    font-size: 1rem;
+  }
+}
+  
+  
+  /* Estilos de los bloques */
+  div.Bloque1,
+  div.Bloque2,
+  div.Bloque3,
+  div.Bloque4,
+  div.Bloque5,
+  div.Bloque6
+  {
+    background: #ffffff;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+    padding: 1.2rem;
+
+      width: calc(100% - 30px); /* Ajusta el ancho para que se distribuyan 4 bloques por fila con espacio entre ellos */
+  }
+  /* Diseño responsivo con media queries */
+@media screen and (min-width: 576px) {
+  div.Bloque1,
+  div.Bloque2,
+  div.Bloque3,
+  div.Bloque4,
+  div.Bloque5,
+  div.Bloque6 {
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  div.Bloque1,
+  div.Bloque2,
+  div.Bloque3,
+  div.Bloque4,
+  div.Bloque5,
+  div.Bloque6 {
+    width: calc(33.33% - 30px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  div.Bloque1,
+  div.Bloque2,
+  div.Bloque3,
+  div.Bloque4,
+  div.Bloque5,
+  div.Bloque6 {
+    width: calc(25% - 30px);
+  }
+}
+
+/* Efecto hover opcional */
+div.Bloque1:hover,
+div.Bloque2:hover,
+div.Bloque3:hover,
+div.Bloque4:hover,
+div.Bloque5:hover,
+div.Bloque6:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 106, 0, 0.4);
+}
+  
+  /* Media Queries para hacer la página responsiva */
+  @media (max-width: 1200px) {
+    div.Bloque1,
+    div.Bloque2,
+    div.Bloque3,
+    div.Bloque4,
+    div.Bloque5,
+    div.Bloque6
+    {
+      width: calc(33.33% - 10px); /* 3 bloques por fila */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    div.Bloque1,
+    div.Bloque2,
+    div.Bloque3,
+    div.Bloque4,
+    div.Bloque5,
+    div.Bloque6
+    {
+      width: calc(50% - 10px); /* 2 bloques por fila */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    div.Bloque1,
+    div.Bloque2,
+    div.Bloque3,
+    div.Bloque4,
+    div.Bloque5 {
+      width: 100%; /* 1 bloque por fila */
+    }
+  }
+  
+  
+  /* Estilos del botón "ALQUILA YA" */
+  .button {
+    width: 180px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    background-image: linear-gradient(rgba(8, 252, 0, 0.763), rgb(4, 115, 8)); /* Fondo con un degradado lineal */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Bordes redondeados, haciendo que el botón sea ovalado */
+    color: rgb(255, 255, 255); /* Color del texto */
+    font-weight: 600; /* Grosor de la fuente */
+    display: flex; /* Uso de Flexbox para alinear el contenido */
+    align-items: center; /* Alinea verticalmente el contenido al centro */
+    justify-content: center; /* Alinea horizontalmente el contenido al centro */
+    gap: 5px; /* Espacio entre los elementos hijos del botón */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+    box-shadow: 1px 3px 0px rgb(0, 213, 46); /* Sombra del botón */
+    transition-duration: 0.3s; /* Duración de la transición de las propiedades que cambian */
+  }
+  
+  .button:hover {
+    background-image: linear-gradient(rgba(4, 115, 8, 0.763), rgb(8, 252, 0)); /* Fondo invertido en hover */
+    color: rgb(255, 255, 255); /* Color del texto en hover */
+  }
+  /*Adiccionarcolor al CARRITO DE COMPRAS*/
+  .cartIcon path {
+    fill: rgb(255, 255, 255); /* Asegura que el color de relleno sea blanco */
+  }
+  
+  .button:active {
+    transform: scale(0.95); /* Efecto de presión */
+    box-shadow: 1px 3px 0px rgb(0, 213, 46); /* Sombra del botón */
+  }
+  /* Estilos de la tarjeta */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 340px;
+    padding: 20px 1px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(255, 106, 0, 0.4), 0 4px 6px -4px rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background-color: #ff8000;
+    background: linear-gradient(45deg, #ff4d00 0%, #ff9900 100%);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+  .content {
+    padding: 20px;
+    
+  }
+  
+  
+  .content img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+  }
+  
+  .content .price1 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 28px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+  }
+  
+  .content .description {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .content .title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+  
+  button {
+  
+    user-select: none;
+    border: none;
+    outline: none;
+    color: rgb(255 255 255);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.90rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(20, 94, 14);
+    border-radius: 0.5rem;
+    width: 90%;
+    text-shadow: 0px 4px 18px #c8ff00;
+  }
+  
+  /* Media Queries para hacer la página responsiva */
+  @media (max-width: 768px) {
+    .contenedor-bloques {
+      flex-direction: column; /* Cambia la dirección de los bloques a columna en pantallas más pequeñas */
+      align-items: center; /* Centra los bloques verticalmente */
+    }
+  
+    .contenedor-bloques .fila {
+      flex-direction: column; /* Asegura que cada fila también se ajuste */
+      width: 100%; /* Asegura que los bloques ocupen el ancho completo */
+    }
+  
+    nav ul {
+      flex-direction: column; /* Coloca los elementos del menú en una columna */
+    }
+  }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Estilo base: 3 columnas */
+  .flex-container > div {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    box-sizing: border-box;
+  }
+  
+  /* Para tablets: 2 columnas */
+  @media (max-width: 992px) {
+    .flex-container > div {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  /* Para celulares: 1 columna */
+  @media (max-width: 600px) {
+    .flex-container > div {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  
+  
+  /* Botón de búsqueda */
+.input__container {
+  position: relative; /* Posiciona el contenedor relativo para controlar el contenido interno */
+  background: rgba(255, 255, 255, 0.664); /* Fondo semitransparente para el contenedor */
+  padding: 9px 25px; /* Añade espacio interno alrededor del contenido */
+  display: flex; /* Aplica flexbox para alinear los elementos internos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 5px; /* Añade un espacio de 5px entre los elementos internos */
+  border-radius: 25px; /* Bordes redondeados para el contenedor */
+  max-width: 500px; /* Define un ancho máximo de 500px */
+  transform-style: preserve-3d; /* Mantiene la estructura 3D para los elementos transformados */
+  transform: rotateX(1deg) rotateY(-10deg); /* Aplica una ligera rotación 3D para efecto visual */
+}
+
+.shadow__input {
+  position: absolute; /* Posiciona la sombra detrás del contenedor */
+  width: 100%; /* Ancho completo de su contenedor */
+  height: 100%; /* Altura completa de su contenedor */
+  left: 0; /* Alinea a la izquierda */
+  bottom: 0; /* Alinea al fondo */
+  z-index: -1; /* Coloca la sombra detrás de otros elementos */
+  filter: blur(30px); /* Añade un desenfoque para suavizar la sombra */
+  border-radius: 20px; /* Bordes redondeados para la sombra */
+  background-color: #ffdb99; /* Color base para la sombra */
+  background-image: radial-gradient(55)/* Gradientes radiales para efectos de color */
+}
+
+.input__button__shadow {
+  cursor: pointer; /* Cambia el cursor a puntero en hover */
+  border: none; /* Sin borde para el botón */
+  background: none; /* Fondo transparente */
+  transition: transform 0ms; /* Transición de fondo y transformación */
+  display: flex; /* Usa flexbox para alinear el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  border-radius: 12px; /* Bordes redondeados del botón */
+  padding: 5px; /* Añade espacio interno */
+}
+
+.input__button__shadow:hover {
+  background: rgba(105, 70, 70, 0.411); /* Fondo en hover para resaltar el botón */
+}
+
+.input__search {
+  width: 900%; /* Ancho amplio, posiblemente para efecto visual */
+  border-radius: 40px; /* Bordes redondeados */
+  outline: none; /* Sin borde de enfoque */
+  border: none; /* Sin borde adicional */
+  padding: 7px; /* Espaciado interno */
+  position: relative; /* Posición relativa para posicionamiento interno */
+}
+
+
+h3 {
+  text-align: center;
+  font-family: fantasy;
+  text-shadow: 0px 0px 10px #ffe600;
+  color: #d53b08b9;
+}
+  
+h5 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: normal; /* Quita la negrita */
+}
+#seccion3 {
+  padding: 25px;
+  background-color: #ffffff;
+}
+
+.flex-container1 {
+  display: flex; /* Hace que las dos columnas se alineen en fila */
+  justify-content: space-between; /* Espacio entre las dos columnas */
+  gap: 50px; /* Añade espacio entre las dos columnas */
+}
+
+.column1, .column2, .column3 {
+  flex: 1; /* Cada columna ocupa el mismo espacio */
+  padding: 20px;
+  background-color: #f4faf6;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(20, 115, 1, 0.83); /* Añade una sombra suave para resaltar las cajas */
+}
+
+.column1 img, .column2 img, .column3 img{
+  max-width: 100%;; /* Las imágenes ocuparán todo el ancho de sus columnas */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(31, 6, 6, 0.2); /* Sombra para las imágenes */
+  height: auto;
+  text-align: center;
+}
+
+.column1 p, .column2 p, .column3 p{
+  font-size: 15px;
+  margin-bottom: 45px;
+  
+}
+#title {
+  color: rgb(196, 75, 0);
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 0 5px 4px rgba(32, 115, 2, 0.83);
+}
+
+#l1 {
+  text-align: center;
+  color: #00fd04; /* Color del texto blanco */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px; /* Más espacio alrededor del contenido */
+  border: none; /* Sin borde */
+  background: linear-gradient(135deg, #057b5e, #0e1249); /* Degradado de color */
+  border-radius: 12px; /* Esquinas redondeadas */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Sombra para darle profundidad */
+  transition: transform 0.3s ease, background 0.3s ease; /* Transición suave para transformaciones y cambios de color */
+}
+
+/* From Uiverse.io by Yaya12085 */ 
+/* Contenedor principal para centrar los bloques en una fila */
+.metcards-container {
+  display: flex; /* Utiliza Flexbox para organizar elementos en fila */
+  justify-content: center; /* Centra los bloques horizontalmente en el contenedor */
+  gap: 1rem; /* Espacio entre los bloques */
+  flex-wrap: wrap; /* Permite que los bloques se envuelvan en múltiples filas si es necesario */
+  margin-bottom: 2rem; /* Espacio inferior del contenedor */
+}
+.metcard {
+  width: 320px; /* Ancho fijo para cada bloque */
+  display: flex; /* Flexbox para organizar elementos internos */
+  flex-direction: column; /* Apila los elementos internos verticalmente */
+  border-radius: 0.25rem; /* Bordes redondeados */
+  background-color: rgba(17, 24, 39, 1); /* Color de fondo oscuro */
+  padding: 1.5rem; /* Espacio interno alrededor del contenido */
+  margin: 0 1rem; /* Espacio lateral entre cada bloque */
+  box-sizing: border-box; /* Incluye el padding dentro del ancho y alto total del bloque */
+}
+
+
+/* Estilo para el título principal con clase .mettitle */
+.mettitle {
+  /* Tamaño de fuente */
+  font-size: 1.5rem;
+  /* Altura de línea */
+  line-height: 2rem;
+  /* Grosor del texto */
+  font-weight: 700;
+  /* Color del texto */
+  color: #ff6a00;
+}
+
+/* Estilo para el subtítulo con clase .mettitle2 */
+.mettitle2 {
+  /* Tamaño de fuente */
+  font-size: 1.3rem;
+  /* Familia tipográfica */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* Altura de línea */
+  line-height: 2rem;
+  /* Grosor del texto */
+  font-weight: 200;
+  /* Color del texto */
+  color: #ffffff;
+}
+
+/* Estilo para el precio con clase .price */
+.price {
+  /* Tamaño de fuente */
+  font-size: 2.75rem;
+  /* Altura de línea */
+  line-height: 1;
+  /* Grosor del texto */
+  font-weight: 700;
+  /* Color del texto */
+  color: #1eff00;
+}
+
+/* Estilo para la descripción con clase .desc */
+.desc {
+  /* Margen superior */
+  margin-top: 0.75rem;
+  /* Margen inferior */
+  margin-bottom: 0.75rem;
+  /* Altura de línea */
+  line-height: 1.625;
+  /* Color del texto */
+  color: rgba(156, 163, 175, 1);
+}
+
+/* Estilo para listas con clase .lists */
+.lists {
+  /* Margen inferior */
+  margin-bottom: 1.5rem;
+  /* Flexibilidad del contenedor */
+  flex: 1 1 0%;
+  /* Color del texto */
+  color: rgba(156, 163, 175, 1);
+}
+
+/* Estilo para elementos de la lista con clase .list dentro de .lists */
+.lists .list {
+  /* Margen inferior */
+  margin-bottom: 0.5rem;
+  /* Establece un diseño en flexbox */
+  display: flex;
+  /* Margen izquierdo */
+  margin-left: 0.5rem;
+}
+
+/* Estilo para iconos SVG dentro de .list */
+.lists .list svg {
+  /* Altura del icono */
+  height: 1.5rem;
+  /* Ancho del icono */
+  width: 1.5rem;
+  /* Evita que el icono se reduzca */
+  flex-shrink: 0;
+  /* Margen derecho */
+  margin-right: 0.5rem;
+  /* Color del icono */
+  color: rgb(255, 115, 0);
+}
+
+/* Estilo para botones con clase .action */
+.action {
+  /* Elimina el borde */
+  border: none;
+  /* Elimina el contorno */
+  outline: none;
+  /* Establece el botón como un bloque en línea */
+  display: inline-block;
+  /* Bordes redondeados */
+  border-radius: 0.25rem;
+  /* Color de fondo */
+  background-color: rgb(255, 106, 0);
+  /* Espaciado interno izquierdo */
+  padding-left: 1.25rem;
+  /* Espaciado interno derecho */
+  padding-right: 1.25rem;
+  /* Espaciado interno superior */
+  padding-top: 0.75rem;
+  /* Espaciado interno inferior */
+  padding-bottom: 0.75rem;
+  /* Alineación del texto */
+  text-align: center;
+  /* Grosor del texto */
+  font-weight: 600;
+  /* Espaciado entre letras */
+  letter-spacing: 0.05em;
+  /* Color del texto */
+  color: rgb(0, 0, 0);
+}
+
+.image-container {
+  text-align: center; /* Centra la imagen horizontalmente dentro del contenedor */
+}
+
+.image-container img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem; /* Tamaño de fuente ajustable según preferencia */
+  font-weight: 600; /* Peso de la fuente para darle más énfasis */
+  color: #333; /* Color del texto */
+  text-align: center; /* Centrar el texto horizontalmente */
+  background-color: #f2f2f2; /* Color de fondo para destacar el texto */
+  padding: 10px; /* Espacio interno alrededor del texto */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  margin: 20px auto; /* Espaciado vertical y centrado horizontal */
+  width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+#p2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  background: linear-gradient(315deg, #ff9100, #ff6500); /* Naranja moderno con mejor contraste */
+  padding: 20px 25px;
+  border: none; /* Se elimina el borde para mayor limpieza */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Sombra más definida */
+  max-width: 750px;
+  margin: 30px auto;
+  text-align: justify;
+}
+
+#p3 {
+  background: linear-gradient(45deg, #ff7e00, #ff5500, #ffc300); /* Degradado vibrante pero armonioso */
+  color: #ffffff;
+  padding: 25px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada para resaltar */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  max-width: 750px;
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#p3, #p2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Efecto flotante al pasar el cursor */
+}
+
+
+
+
+/* Imagen centrada y mejorada estéticamente */ 
+.centered-image { max-width: 40%; height: auto; border-radius: 1px; /* Bordes redondeados */ 
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /* Sombra */ 
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */ } /* Efecto hover en la imagen */ 
+  .centered-image:hover { transform: scale(1.12); /* Aumentar ligeramente el tamaño */ 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */ }
+
+
+.cardprofile {
+  width: 300px; /* Ancho de la tarjeta */
+  padding: 20px; /* Espaciado interno */
+  background: #d65900; /* Fondo blanco */
+  border: 6px solid #000000; /* Borde negro de 6px */
+  box-shadow: 12px 12px 0 #149a2a; /* Sombra de la caja con desplazamiento */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para transformaciones y sombras */
+  
+}
+
+
+
+/* Efecto hover para la tarjeta */
+.card5:hover {
+  transform: translate(-5px, -5px); /* Mueve la tarjeta ligeramente hacia arriba y a la izquierda */
+  box-shadow: 17px 17px 0 #220000; /* Sombra más pronunciada al hacer hover */
+}
+
+/* Estilo para el título de la tarjeta */
+.card__title {
+  font-size: 32px; /* Tamaño de la fuente */
+  font-weight: 900; /* Fuente en negrita */
+  color: #000000; /* Color negro */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  margin-bottom: 15px; /* Espacio inferior */
+  display: block;
+  position: relative;
+  overflow: hidden; /* Oculta cualquier contenido fuera de los límites */
+}
+
+/* Animación de subrayado en el título */
+.card__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%; /* Ancho del subrayado */
+  height: 3px; /* Altura del subrayado */
+  background-color: #ffffff; /* Color del subrayado */
+  transform: translateX(-100%); /* La línea está fuera de la vista al principio */
+  transition: transform 0.3s; /* Transición suave */
+}
+
+.card:hover .card__title::after {
+  transform: translateX(0); /* La línea se mueve para aparecer al hacer hover */
+}
+
+/* Estilo para el contenido de la tarjeta */
+.card__content {
+  font-size: 16px; /* Tamaño de la fuente */
+  line-height: 1.4; /* Altura de línea para mayor legibilidad */
+  color: #000000; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo y comportamiento del formulario */
+.card__form {
+  display: flex; /* Uso de flexbox para organizar los elementos en columna */
+  flex-direction: column; /* Dirección vertical */
+  gap: 15px; /* Espacio entre los elementos */
+}
+
+/* Estilo para el campo de entrada */
+.card__form input {
+  padding: 10px; /* Relleno dentro del campo de texto */
+  border: 3px solid #000000; /* Borde negro */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-family: inherit; /* Hereda la familia de fuente del documento */
+  transition: transform 0.3s; /* Transición para transformaciones */
+  width: calc(100% - 26px); /* Ancho ajustado teniendo en cuenta el padding y borde */
+}
+
+/* Estilo para el campo de entrada cuando está en foco */
+.card__form input:focus {
+  outline: none; /* Sin borde por defecto al hacer foco */
+  transform: scale(1.05); /* Aumento de tamaño al enfocar */
+  background-color: #000; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Estilo para el botón */
+.card__button {
+  border: 3px solid #000; /* Borde negro */
+  background: #056919; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 10px; /* Relleno dentro del botón */
+  font-size: 18px; /* Tamaño de la fuente */
+  left: 20%; /* Desplazamiento del botón */
+  font-weight: bold; /* Fuente en negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  cursor: pointer; /* Puntero al pasar el mouse */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s; /* Transición suave */
+  width: 50%; /* Ancho del 50% del contenedor */
+  height: 100%; /* Altura completa */
+}
+
+/* Efecto hover en el botón: cambio de contenido con pseudo-elemento ::before */
+.card__button::before {
+  content: "Sure?"; /* Contenido que aparece dentro del botón */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 105%;
+  background-color: #5ad641; /* Fondo verde */
+  color: #000; /* Texto negro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%); /* Desplazado hacia abajo */
+  transition: transform 0.3s; /* Transición suave */
+}
+
+/* El contenido se desliza hacia arriba al hacer hover en el botón */
+.card__button:hover::before {
+  transform: translateY(0);
+}
+
+/* Estilo al presionar el botón */
+.card__button:active {
+  transform: scale(0.95); /* El botón se reduce un poco cuando es presionado */
+}
+
+
+
+/* Aplicar animación de glitch */
+.glitch {
+  animation: glitch 0.3s infinite; /* La animación de glitch se repite infinitamente */
+}
+
+
+
+  /* Estilos generales Del apartado del registro exitoso de los usuarios a los propietarios*/
+body#contactar { margin: 0; /* Elimina los márgenes predeterminados del body */ 
+    padding: 0; /* Elimina los rellenos predeterminados del body */ 
+    font-family: 'Arial', sans-serif; /* Establece la fuente de texto */ 
+    display: flex; /* Utiliza el modelo de caja flexible para alinear elementos */ 
+    justify-content: center; /* Centra los elementos horizontalmente */ 
+    align-items: center; /* Centra los elementos verticalmente */ 
+    height: 100vh; /* Establece la altura del body al 100% de la altura de la ventana */ 
+    background: linear-gradient(135deg, #098d00, rgb(255, 102, 0)); /* Aplica un fondo degradado */ 
+  } 
+
+.containerregistro { background: #fff; /* Establece el color de fondo a blanco */ 
+      border-radius: 10px; /* Redondea las esquinas del contenedor */ 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera al contenedor */ 
+      padding: 20px; /* Añade un relleno interno de 20 píxeles */ 
+      max-width: 500px; /* Establece el ancho máximo del contenedor */ 
+      text-align: center; /* Centra el texto dentro del contenedor */ 
+    } /* Estilos del mensaje del título */ 
+
+.message1 
+        h1#registro { color: #09921b; /* Establece el color del texto a un tono verde */ 
+        margin-bottom: 20px; /* Añade un margen inferior de 20 píxeles */ 
+        font-size: 2rem; /* Establece el tamaño de la fuente a 2 rem */ 
+      } /* Estilos del mensaje del párrafo */ 
+
+.message1 p#propietario { color: #333; /* Establece el color del texto a un gris oscuro */ 
+          font-size: 1.2rem; /* Establece el tamaño de la fuente a 1.2 rem */ 
+        } /* Efecto hover en el contenedor */ 
+
+.containerregistro:hover { 
+            transform: scale(1.02); /* Aumenta ligeramente el tamaño del contenedor */ 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Añade una sombra más pronunciada al contenedor */ 
+            transition: transform 0.3s, box-shadow 0.3s; /* Aplica una transición suave al cambiar el tamaño y la sombra */
+          } 
+/*BOTÓN SEGUIR ALQUILANDO */ 
+/* Estilo para el botón con clase .button2 */
+.button2 {
+  /* Establece el botón como un elemento en línea y bloque */
+  display: inline-block;
+  /* Transición para efectos suaves */
+  transition: all 0.2s ease-in;
+  /* Posiciona el botón relativamente dentro de su contenedor */
+  position: relative;
+  /* Oculta cualquier contenido que exceda los límites del botón */
+  overflow: hidden;
+  /* Define el nivel de apilamiento */
+  z-index: 1;
+  /* Color del texto */
+  color: #090909;
+  /* Espaciado interno del botón */
+  padding: 0.7em 1.7em;
+  /* Cambia el cursor a un puntero al pasar sobre el botón */
+  cursor: pointer;
+  /* Tamaño de la fuente del texto */
+  font-size: 18px;
+  /* Bordes redondeados del botón */
+  border-radius: 0.5em;
+  /* Color de fondo del botón */
+  background: #ff7002;
+  /* Define un borde de 1px sólido */
+  border: 1px solid #e8e8e8;
+  /* Sombras externas para un efecto de profundidad */
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+/* Estilo cuando el botón es presionado */
+.button2:active {
+  /* Cambia el color del texto */
+  color: #666;
+  /* Sombras internas para simular una pulsación */
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+/* Elemento pseudo antes del botón */
+.button2:before {
+  /* Contenido vacío */
+  content: "";
+  /* Posición absoluta respecto al botón */
+  position: absolute;
+  /* Centra horizontalmente el elemento */
+  left: 50%;
+  /* Traduce el elemento para centrarlo */
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  /* Inicialmente ubicado fuera del botón */
+  top: 100%;
+  /* Ancho del pseudo elemento */
+  width: 140%;
+  /* Altura del pseudo elemento */
+  height: 180%;
+  /* Color de fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.05);
+  /* Bordes redondeados para un efecto circular */
+  border-radius: 50%;
+  /* Lo hace visible como un bloque */
+  display: block;
+  /* Transición para animación */
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  /* Nivel de apilamiento detrás del botón */
+  z-index: -1;
+}
+
+/* Elemento pseudo después del botón */
+.button2:after {
+  /* Contenido vacío */
+  content: "";
+  /* Posición absoluta respecto al botón */
+  position: absolute;
+  /* Centra horizontalmente el elemento */
+  left: 55%;
+  /* Traduce el elemento para centrarlo */
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  /* Inicialmente ubicado más lejos del botón */
+  top: 180%;
+  /* Ancho del pseudo elemento */
+  width: 160%;
+  /* Altura del pseudo elemento */
+  height: 190%;
+  /* Color de fondo específico */
+  background-color: #009087;
+  /* Bordes redondeados para un efecto circular */
+  border-radius: 50%;
+  /* Lo hace visible como un bloque */
+  display: block;
+  /* Transición para animación */
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  /* Nivel de apilamiento detrás del botón */
+  z-index: -1;
+}
+
+/* Estilo del botón al pasar el ratón por encima */
+.button2:hover {
+  /* Cambia el color del texto */
+  color: #ffffff;
+  /* Cambia el color del borde */
+  border: 1px solid #009087;
+}
+
+/* Cambios en el pseudo elemento antes al pasar el ratón */
+.button2:hover:before {
+  /* Mueve hacia arriba el pseudo elemento */
+  top: -35%;
+  /* Cambia el color de fondo */
+  background-color: #0a9000;
+  /* Cambia la escala del pseudo elemento */
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* Cambios en el pseudo elemento después al pasar el ratón */
+.button2:hover:after {
+  /* Mueve hacia arriba el pseudo elemento */
+  top: -45%;
+  /* Cambia el color de fondo */
+  background-color: #00b303;
+  /* Cambia la escala del pseudo elemento */
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+/* Estilos generales para el cuerpo de la página */
+body #negro {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente de la página */
+  background: linear-gradient(to right, #ff700b, #00ff00, #057b5e); /* Fondo degradado */
+  display: flex; /* Configuración de diseño flexible */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Altura completa de la ventana */
+  margin: 0; /* Sin margen */
+}
+
+/* Contenedor principal de la página */
+.container #negro2 {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center; /* Centrar texto */
+  max-width: 400px; /* Ancho máximo */
+  width: 100%; /* Ancho completo */
+}
+
+/* Estilo del título principal */
+h1 {
+  color: #ff700b; /* Color del texto */
+  font-size: 1.8em; /* Tamaño de la fuente */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo de la sección de estado del pedido */
+.order-status {
+  display: flex; /* Diseño flexible */
+  flex-direction: column; /* Columna */
+  align-items: center; /* Centrar elementos */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+/* Estilo del texto de estado del pedido */
+.order-status p {
+  color: #057b5e; /* Color del texto */
+  font-size: 1.2em; /* Tamaño de la fuente */
+  margin: 0; /* Sin margen */
+}
+/* PAG PEDIDO-PREPARACION ANIM CAMION
+/* Estilos de la animación del camión */
+.loader {
+  width: fit-content; /* Ajuste al contenido */
+  height: fit-content; /* Ajuste al contenido */
+  display: flex; /* Diseño flexible */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Contenedor del camión */
+.truckWrapper {
+  width: 200px; /* Ancho del contenedor */
+  height: 100px; /* Altura del contenedor */
+  display: flex; /* Diseño flexible */
+  flex-direction: column; /* Columna */
+  position: relative; /* Posición relativa */
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: flex-end; /* Alinear al fondo */
+  overflow-x: hidden; /* Ocultar desbordamiento horizontal */
+}
+
+/* Parte superior del camión */
+.truckBody {
+  width: 130px; /* Ancho del camión */
+  height: fit-content; /* Ajuste al contenido */
+  margin-bottom: 6px; /* Espacio inferior */
+  animation: motion 1s linear infinite; /* Animación de movimiento */
+}
+
+/* Definición de la animación de suspensión del camión */
+@keyframes motion {
+  0% {
+      transform: translateY(0px); /* Posición inicial */
+  }
+  50% {
+      transform: translateY(3px); /* Posición intermedia */
+  }
+  100% {
+      transform: translateY(0px); /* Posición final */
+  }
+}
+
+/* Llantas del camión */
+.truckTires {
+  width: 130px; /* Ancho del contenedor de llantas */
+  height: fit-content; /* Ajuste al contenido */
+  display: flex; /* Diseño flexible */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: space-between; /* Espaciado uniforme */
+  padding: 0px 10px 0px 15px; /* Espaciado interno */
+  position: absolute; /* Posición absoluta */
+  bottom: 0; /* Alinear al fondo */
+}
+
+/* Estilo de las llantas (SVG) */
+.truckTires svg {
+  width: 24px; /* Ancho de las llantas */
+}
+
+/* Carretera */
+.road {
+  width: 100%; /* Ancho completo */
+  height: 1.5px; /* Altura */
+  background-color: #282828; /* Color de fondo */
+  position: relative; /* Posición relativa */
+  bottom: 0; /* Alinear al fondo */
+  align-self: flex-end; /* Alinear al fondo del contenedor flexible */
+  border-radius: 3px; /* Bordes redondeados */
+}
+
+/* Líneas de la carretera (pseudo-elementos) */
+.road::before {
+  content: "";
+  position: absolute;
+  width: 20px; /* Ancho de la línea */
+  height: 100%; /* Altura completa */
+  background-color: #282828; /* Color de fondo */
+  right: -50%; /* Posición inicial */
+  border-radius: 3px; /* Bordes redondeados */
+  animation: roadAnimation 1.4s linear infinite; /* Animación */
+  border-left: 10px solid white; /* Borde blanco */
+}
+
+.road::after {
+  content: "";
+  position: absolute;
+  width: 10px; /* Ancho de la línea */
+  height: 100%; /* Altura completa */
+  background-color: #282828; /* Color de fondo */
+  right: -65%; /* Posición inicial */
+  border-radius: 3px; /* Bordes redondeados */
+  animation: roadAnimation 1.4s linear infinite; /* Animación */
+  border-left: 4px solid white; /* Borde blanco */
+}
+
+/* Poste de luz */
+.lampPost {
+  position: absolute; /* Posición absoluta */
+  bottom: 0; /* Alinear al fondo */
+  right: -90%; /* Posición inicial */
+  height: 90px; /* Altura del poste */
+  animation: roadAnimation 1.4s linear infinite; /* Animación */
+}
+
+/* Definición de la animación de la carretera */
+@keyframes roadAnimation {
+  0% {
+      transform: translateX(0px); /* Posición inicial */
+  }
+  100% {
+      transform: translateX(-350px); /* Posición final */
+  }
+}
+.containerhead {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+#footgrey {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+  padding: 40px 0 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-logo {
+  max-width: 140px;
+  margin-bottom: 15px;
+}
+
+.footer-section #hfoot {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-section  #hfoot::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary);
+  margin-top: 10px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  color: var(--primary);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s;
+}
+
+.social-link:hover {
+  background-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  background-color: var(--success);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .search-input {
+      width: 200px;
+  }
+  .search-input:focus {
+      width: 220px;
+  }
+}
+#menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+:root {
+  --text-dark: #222222;   /* Un gris oscuro o negro */
+  --text-light: #ffffff;  /* Blanco */
+}

@@ -1,0 +1,194 @@
+/* RESET Y FUENTE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ALTURA COMPLETA */
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* FONDO CON IMAGEN */
+body {
+  background: url("iniciov2.png") no-repeat center center/cover;
+  position: relative;
+}
+
+/* CAPA OSCURA PARA MEJOR CONTRASTE */
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CONTENEDOR LOGIN */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  max-width: 400px;
+  width: 100%;
+  animation: slideUp 0.8s ease-out;
+  transition: all 0.3s ease;
+}
+
+/* LOGO MEJORADO */
+.logo {
+  width: 180px;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* TÍTULO */
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  animation: fadeIn 1s ease;
+}
+
+/* CAMPOS DE ENTRADA */
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #f57c00;
+  outline: none;
+}
+
+/* BOTÓN */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #f57c00, #ff6117);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to right, #00b612, #00b324);
+  transform: scale(1.03);
+}
+
+/* TEXTO DE REGISTRO */
+.registro {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #333;
+  animation: fadeIn 1.2s ease;
+}
+
+.registro a {
+  color: #388e3c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.registro a:hover {
+  color: #1b5e20;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  text-align: center;
+  background-color: rgb(167, 74, 3);
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+/* ÍCONOS DE REDES */
+.social-icon {
+  width: 26px;
+  margin: 0 6px;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* ANIMACIONES */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE: MOBILE FIRST */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .login-container h2 {
+    font-size: 22px;
+  }
+
+  .logo {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

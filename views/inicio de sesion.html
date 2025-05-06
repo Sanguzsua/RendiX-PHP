@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title><!--titulo que aparece en la pestaña del navegador-->
+    <link rel="stylesheet" href="CSS/Style inicio.css"><!--enlace para el estilo de la pagina--> 
+</head>
+
+<body>
+    
+    <div class="container"><!--contenedor principal donde se incluye un boton y el titulo-->
+        <h1>Inicio de sesion</h1><!--titulo dentro del contenedor-->
+        <form onsubmit="return iniciarSesion(event)">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br>
+            
+            <button onclick="iniciar()">Iniciar Sesión</button><!--botón para enviar el formulario-->
+        </form>
+    </div>
+    <img src="IMAGENES/RendiX.png" alt="rendix"><!--imagen del logo-->
+<footer id="contacto"><!--pie de página con información de contacto-->
+    <p>Contacto:rendix@hotmail.com</p><!--informacio de contacto "correo electrónico"-->
+    <p>Redes sociales: 
+        <a href="#" class="social-link">
+            <img src="imagenes/linkedin.png" alt="LinkedIn" class="social-icon"> 
+        </a>  
+        <a href="#" class="social-link">
+            <img src="imagenes/github.png" alt="GitHub" class="social-icon">
+        </a>  
+        </p>
+
+</footer>
+<script src="iniciarsesion.js"></script>
+</body>
+</html>

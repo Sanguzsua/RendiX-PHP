@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+    <script src="Botones.js"></script>
+
+</head>
+<body>
+    <!-- Inicio del encabezado de la página -->
+    <header>
+        <div class="container">
+          <div class="logo">
+            <!-- Imagen del logo de RendiX -->
+            <img src="IMAGENES/RendiX.jpg" alt="Logo de Rendix">
+          </div>
+    </header>
+    <h3 id="l1">¿CUAL ES LA FRANQUICIA DE TU BANCO?</h3>
+<!-- Contenedor principal para los métodos de pago -->
+<div class="metcards-container">
+
+    <!-- Primer bloque de método de pago: Contra Entrega -->
+    <div class="Bloque1">
+      <div class="metcard">
+        <div class="meta">
+          <!-- Título y subtítulo del método de pago -->
+          <span class="mettitle">SOY TEAM</span>
+          <span class="price">VISA</span>
+          <br>
+          <br>
+          <!-- Imagen representativa del método de pago -->
+          <img src="IMAGENES/pngwing.com.png" alt="Lavadora-Haceb" width="100">
+        </div>
+        <br>
+
+        <!-- Botón para continuar con este método de pago -->
+        <button onclick="vis()" class="action">Procesar pago</button>
+      </div>
+    </div>
+
+    <!-- Segundo bloque de método de pago: Tarjeta Bancaria -->
+    <div class="Bloque2">
+      <div class="metcard">
+        <div class="meta">
+          <span class="mettitle">SOY TEAM</span>
+          <span class="price">Mastercard</span>
+          <img src="IMAGENES/pngwing.com (1).png" alt="Lavadora-Haceb" width="100">
+        </div>
+
+        <button onclick="mastercard()" class="action">Procesar pago</button>
+      </div>
+    </div>
+
+  </div> <!-- Fin del contenedor principal de métodos de pago -->
+
+</body>
+</html>
