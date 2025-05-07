@@ -176,3 +176,70 @@ window.onload = () => {
     contenedor.appendChild(card);
   });
 };
+//funcion para agregar al carrito de compras
+function agregarAlCarrito(nombreProducto, tipoEntrega) {
+  let precioBase;
+  let imagen;
+  let costoDomicilio = 12500;
+// Se utiliza una estructura switch para identificar qué producto seleccionó el usuario
+  switch (nombreProducto) {
+    // Cada caso representa un producto específico
+    case "Lavadora 11 Kilogramos Haceb Panel Frontal Digital Gris":
+      precioBase = 70000;
+      costoDomicilio=12500;
+      imagen = "IMAGENES/7704353431483-1.webp";
+      break;
+    case "PC Gamer Ryzen 5":
+      precioBase = 150000;
+      costoDomicilio=12500;
+      imagen = "IMAGENES/PCRYZEN.webp";
+      break;
+    case "Televisor 32 Pulgadas Challenger LED TV3":
+      precioBase = 60000;
+      costoDomicilio=12500;
+      imagen = "IMAGENES/7705191043944_01.webp";
+      break;
+    case "Xbox 360":
+      precioBase = 65000;
+      costoDomicilio=12500;
+      imagen = "IMAGENES/41G+FzEeRCL.jpg";
+      break;
+    case "CAMPING IGLU ROYAKAMP 4 PERSONAS":
+      precioBase = 55000;
+      costoDomicilio=12500;
+      imagen = "IMAGENES/tienda-turistica-aislado-sobre-fondo-blanco_873674-588.avif";
+      break;
+    case "Renault Kwid 2019":
+      precioBase = 200000;
+      costoDomicilio=12500;
+      imagen = "IMAGENES/Renault Kwid.jpeg";
+      break;
+    // Si el nombre del producto no coincide con ninguno de los anteriores muestra una alerta
+      default:
+      alert("Producto no encontrado");
+      return;
+  }
+  
+// Se crea un objeto que representa el producto con toda su información
+  const producto = {
+    nombre: nombreProducto,
+    imagen: imagen,
+    tipoEntrega: tipoEntrega,
+    // Si el usuario eligió entrega a domicilio, se suma el costo extra al precio base,de lo contrario, solo se asigna el precio base
+    precio: tipoEntrega === "domicilio" ? precioBase + costoDomicilio : precioBase
+  };
+// Recupera el carrito actual desde el almacenamiento local del navegador si no existe, se inicializa como un arreglo vacío
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  carrito.push(producto);
+  // Guarda el carrito actualizado en el almacenamiento local (como texto JSON)
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  // Muestra una alerta al usuario confirmando que se agregó el producto
+  alert("¡Producto agregado al carrito!");
+}
+function seguirAlquilando() {
+  // Eliminar el carrito del localStorage
+  localStorage.removeItem("carrito");
+
+  // Redirigir al usuario de vuelta al sitio de alquiler, por ejemplo, a la página principal
+  window.location.href = "index.html"; // Cambia "index.html" por la URL correcta
+}

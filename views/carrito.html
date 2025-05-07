@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link rel="stylesheet" href="css/carr.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito</title>
+  <link rel="stylesheet" href="CSS/carr.css">
+  <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-    <header>
-        <h1>Tu Carrito</h1> <img src="imagenes/rendix logo.png" alt="rendix" class="imgr">
-    </header>
-    <main>
-        <div id="productos-carrito">
-            <!--Aquí se mostrarán los productos-->
-            <p>No hay productos en tu carrito aún.</p>
-        </div>
-    </main>
-<footer id="contacto"><!--pie de página con información de contacto-->
-        <p>Contacto:rendix@hotmail.com</p><!--informacio de contacto "correo electrónico"-->
-        <p>Redes sociales: 
-            <a href="#" class="social-link">
-                <img src="imagenes/linkedin.png" alt="LinkedIn" class="social-icon"> 
-            </a>  
-            <a href="#" class="social-link">
-                <img src="imagenes/github.png" alt="GitHub" class="social-icon">
-            </a>  
-            </p>
-    
-    </footer>
-</head>
-<body>
+  <header>
+    <h1>Tu Carrito</h1>
+    <a href="index.html">
+      <img src="IMAGENES/RendiX.jpg" alt="rendix" class="imgr">
+    </a>
+  </header>
+
+  <main>
+    <div id="productos-carrito">
+      <p>No hay productos en tu carrito aún.</p>
+    </div>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const contenedor = document.getElementById("productos-carrito");
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      let total = 0;
+
+      if (carrito.length === 0) {
+        contenedor.innerHTML = "<p>No hay productos en tu carrito aún.</p>";
+      } else {
+        contenedor.innerHTML = "";
+        carrito.forEach(producto => {
+          total += producto.precio;
+          const div = document.createElement("div");
+          div.classList.add("producto-en-carrito");
+          div.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}" width="100">
+            <h3>${producto.nombre}</h3>
+            <p>Tipo de entrega: ${producto.tipoEntrega}</p>
+            <p>Precio: $${producto.precio.toLocaleString()}</p>
+          `;
+          contenedor.appendChild(div);
+        });
+
+        const totalDiv = document.createElement("div");
+        totalDiv.innerHTML = `
+          <h2>Total a pagar: $${total.toLocaleString()}</h2>
+          <button onclick="redirigirPago()">Pagar</button>
+        `;
+        contenedor.appendChild(totalDiv);
+      }
+    });
+
+    function vaciarCarrito() {
+      localStorage.removeItem("carrito");
+      location.reload();
+    }
+
+    function redirigirPago() {
+      window.location.href = "pago.html";
+    }
+  </script>
+</body>
 </html>
 

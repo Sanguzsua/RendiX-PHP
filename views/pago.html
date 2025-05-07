@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="CSS/carr.css">
+  <link rel="stylesheet" href="CSS/Style.css">
+  <title>Pago</title>
+ </head>
+<body>
+    <header>
+        <h1>Elige tu método de pago</h1> <a href="index.html">
+            <img src="IMAGENES/RendiX.jpg" alt="rendix" class="imgr">
+          </a>
+          
+    </header>
+  
+   <!-- Contenedor principal para los métodos de pago -->
+   <div class="metcards-container">
+
+    <!-- Primer bloque de método de pago: Contra Entrega -->
+    <div class="Bloque1">
+      <div class="metcard">
+        <div class="meta">
+          <!-- Título y subtítulo del método de pago -->
+          <span class="mettitle">CONTRA</span>
+          <span class="price">ENTREGA</span>
+          <!-- Imagen representativa del método de pago -->
+          <br>
+          <br>
+          <img src="IMAGENES/1757493.png" alt="Lavadora-Haceb" width="100">
+        </div>
+        <!-- Descripción del método de pago -->
+        <p class="desc">Método de pago en el cual el cliente realiza el pago de su compra al momento de recibir el producto en su domicilio.</p>
+        <!-- Lista de características del método de pago -->
+        <br>
+        <ul class="lists">
+          <li class="list">
+            <!-- Icono SVG para la primera característica -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Seguridad</span>
+          </li>
+        </ul>
+        <!-- Botón para continuar con este método de pago -->
+        <button onclick="met1()" class="action">continuar</button>
+      </div>
+    </div>
+
+    <!-- Segundo bloque de método de pago: Tarjeta Bancaria -->
+    <div class="Bloque2">
+      <div class="metcard">
+        <div class="meta">
+          <span class="mettitle">Pago Con</span>
+          <span class="price">Tarjeta Bancaria</span>
+          <img src="IMAGENES/6757707.png" alt="Lavadora-Haceb" width="100">
+        </div>
+        <p class="desc">Método de pago en el cual se realiza una transacción en la que un cliente utiliza una tarjeta de débito o crédito...</p>
+        <ul class="lists">
+          <li class="list">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Seguridad</span>
+          </li>
+        </ul>
+        <button onclick="met2()" class="action">continuar</button>
+      </div>
+    </div>
+
+  </div> <!-- Fin del contenedor principal de métodos de pago -->
+  <script src="Botones.js"></script>
+</body>
+<footer>
+    <h4>Contáctanos</h4>
+    <p><strong>Email:</strong> contacto@rendix.com</p>
+    <p><strong>Teléfono:</strong> +57 318 341 4381</p>
+    <p><strong></strong> Compañia 100% Colombiana</p>
+    <p>&copy; 2024 Rendix. Todos los derechos reservados.</p>
+  </footer>
+</html>
