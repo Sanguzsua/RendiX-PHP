@@ -209,7 +209,7 @@ function agregarAlCarrito(nombreProducto, tipoEntrega) {
       costoDomicilio=12500;
       imagen = "IMAGENES/tienda-turistica-aislado-sobre-fondo-blanco_873674-588.avif";
       break;
-    case "Renault Kwid 2019":
+    case "Renault Kwid 2019.":
       precioBase = 200000;
       costoDomicilio=12500;
       imagen = "IMAGENES/Renault Kwid.jpeg";
